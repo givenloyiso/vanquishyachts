@@ -5,6 +5,9 @@
     "scripts": {
         "dev": "next dev",
         "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "debug": "yarn lint --fix && git add -A .",
         "export": "next export"
     },
     "dependencies": {
