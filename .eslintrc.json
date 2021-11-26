@@ -1,0 +1,15 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": ["next", "prettier", "next/core-web-vitals"],
+    // "plugins": ["prettier", "react-hooks"],
+    "rules": {
+        "react-hooks/rules-of-hooks": "off",
+        "no-unused-vars": "warn",
+        "quotes": [2, "single", { "avoidEscape": true }],
+        "indent": ["warn", 4],
+        "@next/next/no-document-import-in-page": "off"
+    }
+}

@@ -1,0 +1,116 @@
+@import "@styles/settings/__settings";
+
+.footer {
+  color: $white;
+  background-color: $dark;
+  width: 100%;
+  padding: 2rem 4rem;
+
+  .wrapper_top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    .colum_locations {
+      p {
+        line-height: 130%;
+      }
+    }
+    .colum_models {
+      padding-top: 2rem;
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          margin: 1rem 0;
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+        }
+      }
+    }
+    .colum_discover {
+      padding-top: 2rem;
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          margin: 1rem 0;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+      }
+    }
+    .colum_follow_us {
+      padding-top: 2rem;
+      ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+        color: $white;
+        li {
+          cursor: pointer;
+          svg {
+            height: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  .wrapper_bottom {
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-top: 0.2px solid rgb(255, 255, 255, 0.8);
+
+    p {
+      margin: 0;
+    }
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
+@include respond(laptop) {
+  .footer {
+    .wrapper_top {
+      grid-template-columns: 1fr 1fr 1fr;
+      .colum_follow_us {
+        padding-bottom: 2rem;
+      }
+    }
+    .wrapper_bottom {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}
+
+@include respond(tablet) {
+  .footer {
+    padding: 2rem 2rem;
+    .wrapper_top {
+      grid-template-columns: 1fr;
+      .colum_models,
+      .colum_discover {
+        p {
+          margin: 0 0 1rem 0;
+        }
+
+        ul {
+          li {
+            margin: 0.5rem 0;
+          }
+        }
+      }
+      .colum_follow_us {
+        padding-bottom: 2rem;
+      }
+    }
+    .wrapper_bottom {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+}

@@ -1,0 +1,373 @@
+@import '@styles/settings/__settings';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    position: relative;
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+}
+
+input,
+select {
+    border: unset;
+    border-bottom: 1px solid $dark;
+    background: unset;
+    padding: 0 0 10px 0;
+    margin: unset;
+    color: $dark;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: unset;
+
+    &:active,
+    &:focus,
+    &:hover,
+    &:focus-visible {
+        border-bottom: 1.4px solid $dark !important;
+        outline: unset !important;
+    }
+    &::placeholder {
+        color: $dark;
+    }
+
+    &[type='text'],
+    &[type='search'],
+    &[type='email'] {
+        outline-offset: 0;
+    }
+    &[type='checkbox'] {
+        /* Double-sized Checkboxes */
+        -ms-transform: scale(2); /* IE */
+        -moz-transform: scale(2); /* FF */
+        -webkit-transform: scale(2); /* Safari and Chrome */
+        -o-transform: scale(2); /* Opera */
+        transform: scale(2);
+        padding: 10px;
+        margin-right: 15px;
+        width: unset;
+        border: 1px solid $red;
+        border-radius: unset;
+    }
+
+    &[type='submit'] {
+        cursor: pointer;
+    }
+}
+
+label.checkbox {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    &:hover input ~ .checkmark {
+        background-color: $gray;
+    }
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked ~ .checkmark {
+            background-color: $gray;
+        }
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 20px;
+        width: 20px;
+        background-color: $white;
+
+        &:after {
+            content: '';
+            position: absolute;
+            display: none;
+            left: 7px;
+            top: 4px;
+            width: 5px;
+            height: 10px;
+            border: solid $white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+
+    input:checked ~ .checkmark:after {
+        display: block;
+    }
+}
+
+//* FONTS
+body,
+a,
+p,
+textarea,
+input,
+select {
+    font-family: 'AvenirBook', sans-serif;
+    font-weight: 400;
+    font-size: 0.938rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+    margin: 25px 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.text-block {
+    font-family: 'AvenirMedium', sans-serif;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 500;
+    color: $red;
+    text-transform: uppercase;
+}
+
+.quote {
+    font-family: 'Bodoni', sans-serif;
+    font-size: 2.813rem;
+}
+
+.slash-text {
+    margin-top: 0;
+    text-transform: uppercase;
+    span {
+        color: $red;
+        margin-right: 5px;
+    }
+}
+
+h1,
+h2,
+q {
+    font-family: 'Bodoni', sans-serif;
+    font-weight: 400;
+    span {
+        color: $red;
+    }
+}
+.special-header {
+    font-size: 9.375rem; //! 75px
+}
+
+h1 {
+    font-size: 4.688rem; //! 75px
+}
+
+h2 {
+    font-size: 3.75rem; //! 60px
+    color: $white;
+}
+
+h3 {
+    font-family: 'AvenirBlack', sans-serif;
+    font-size: 1.375rem; //! 22px
+    font-weight: 900;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: $dark;
+    span {
+        color: $red;
+    }
+}
+
+h4,
+h5,
+h6 {
+    font-family: 'AvenirMedium', sans-serif;
+}
+
+h4 {
+    font-size: 0.938rem; //! 15px
+    font-weight: 500;
+}
+//* TWEAKS
+
+.dark {
+    color: $dark;
+}
+
+d-none {
+    display: none;
+}
+
+.gmnoprint {
+    // display: none;
+    left: 2rem;
+    bottom: 12rem !important;
+}
+
+.gmnoprint .gm-style-cc,
+.gmnoprint.gm-style-cc,
+.gm-style-mtc {
+    display: none;
+}
+
+video::-webkit-media-controls-fullscreen-button {
+    display: none;
+}
+video::-webkit-media-controls-play-button {
+    display: none;
+}
+video::-webkit-media-controls-play-button {
+    display: none;
+}
+video::-webkit-media-controls-timeline {
+    display: none;
+}
+video::-webkit-media-controls-current-time-display {
+    display: none;
+}
+video::-webkit-media-controls-time-remaining-display {
+    display: none;
+}
+video::-webkit-media-controls-time-remaining-display {
+    display: none;
+}
+video::-webkit-media-controls-mute-button {
+    display: none;
+}
+video::-webkit-media-controls-toggle-closed-captions-button {
+    display: none;
+}
+video::-webkit-media-controls-volume-slider {
+    display: none;
+}
+
+//SLIDER MAGAZINE
+
+.item-1 {
+    width: 40%;
+    height: 60%;
+    margin-right: -4rem;
+    z-index: 1;
+}
+.item-2 {
+    width: 60%;
+    height: 80%;
+    margin-right: -8rem;
+    z-index: 2;
+}
+
+.item-3 {
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.item-4 {
+    width: 60%;
+    height: 80%;
+    margin-left: -8rem;
+    z-index: 2;
+}
+.item-5 {
+    width: 40%;
+    height: 60%;
+    margin-left: -4rem;
+    z-index: 1;
+}
+
+body::-webkit-scrollbar {
+    width: 3px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: $red;
+}
+
+.gm-ui-hover-effect {
+    z-index: 10000000 !important;
+    background-color: white !important;
+    right: 1.2rem !important;
+    top: 1.2rem !important;
+    border-radius: 50%;
+}
+
+.gm-style .gm-style-iw-c {
+    border-radius: 0px !important;
+    padding-right: unset !important;
+    padding-bottom: unset !important;
+    padding: 0.75rem !important;
+}
+
+.gm-style-iw-d {
+    overflow-y: scroll !important;
+}
+
+.gm-style-iw-d::-webkit-scrollbar {
+    width: 3px !important;
+}
+
+.gm-style-iw-d::-webkit-scrollbar-track {
+    background: transparent !important;
+}
+
+.gm-style-iw-d::-webkit-scrollbar-thumb {
+    background: $red !important;
+}
+
+//! RESPONSIVE
+//* TABLET
+@include respond(tablet) {
+    .special-header {
+        font-size: 25vw !important;
+    }
+    h1 {
+        font-size: 3.688rem; //! 75px
+    }
+
+    h2 {
+        font-size: 2.75rem; //! 60px
+        color: $white;
+    }
+
+    h3 {
+        font-size: 1.275rem; //! 22px
+    }
+    h4 {
+        font-size: 0.838rem; //! 15px
+    }
+
+    .quote {
+        font-size: 1.813rem;
+    }
+}

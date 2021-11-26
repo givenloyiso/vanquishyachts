@@ -1,0 +1,53 @@
+// SPECIAL HEADER, H1 & QUOTES
+@font-face {
+    font-family: 'Bodoni';
+    src: url('/static/fonts/bodoni/BodoniSvtyTwoITCTTBook01.otf');
+    src: url('/static/fonts/bodoni/BodoniSvtyTwoITCTTBook01.eot')
+            format('embedded-opentype'),
+        url('/static/fonts/bodoni/BodoniSvtyTwoITCTTBook01.woff2')
+            format('woff2'),
+        url('/static/fonts/bodoni/BodoniSvtyTwoITCTTBook01.woff') format('woff'),
+        url('/static/fonts/bodoni/BodoniSvtyTwoITCTTBook01.ttf')
+            format('truetype'),
+        url('/static/fonts/bodoni/BodoniSvtyTwoITCTTBook01.svg#BodoniSvtyTwoITCTTBook01')
+            format('svg');
+}
+
+// HEADERS H3, H4 & TEXT BLOCK
+@font-face {
+    font-family: 'AvenirMedium';
+    src: url('/static/fonts/avenir/AvenirLTStdMedium.otf');
+    src: url('/static/fonts/avenir/AvenirLTStdMedium.eot')
+            format('embedded-opentype'),
+        url('/static/fonts/avenir/AvenirLTStdMedium.woff2') format('woff2'),
+        url('/static/fonts/avenir/AvenirLTStdMedium.woff') format('woff'),
+        url('/static/fonts/avenir/AvenirLTStdMedium.ttf') format('truetype'),
+        url('/static/fonts/avenir/AvenirLTStdMedium.svg#AvenirLTStdMedium')
+            format('svg');
+}
+//PARAGRAPH
+@font-face {
+    font-family: 'AvenirBook';
+    src: url('/static/fonts/avenir/avenir/AvenirLTStdBook.otf');
+    src: url('/static/fonts/avenir/AvenirLTStdBook.eot')
+            format('embedded-opentype'),
+        url('/static/fonts/avenir/AvenirLTStdBook.woff2') format('woff2'),
+        url('/static/fonts/avenir/AvenirLTStdBook.woff') format('woff'),
+        url('/static/fonts/avenir/AvenirLTStdBook.ttf') format('truetype'),
+        url('/static/fonts/avenir/AvenirLTStdBook.svg#AvenirLTStdBook')
+            format('svg');
+}
+
+@font-face {
+    font-family: 'AvenirBlack';
+    src: url('/static/fonts/avenir/AvenirLTStdBlack.otf');
+    src: url('/static/fonts/avenir/AvenirLTStdBlack.eot')
+            format('embedded-opentype'),
+        url('/static/fonts/avenir/AvenirLTStdBlack.woff2') format('woff2'),
+        url('/static/fonts/avenir/AvenirLTStdBlack.woff') format('woff'),
+        url('/static/fonts/avenir/AvenirLTStdBlack.ttf') format('truetype'),
+        url('/static/fonts/avenir/AvenirLTStdBlack.svg#AvenirLTStdBlack')
+            format('svg');
+}
+
+$font-family-default: AvenirBook, Montserrat, monospace;

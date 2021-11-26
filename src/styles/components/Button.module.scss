@@ -1,0 +1,140 @@
+@import '@styles/settings/__settings';
+//BUTTONS
+.btn {
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    align-items: center;
+    width: 230px;
+    height: 44px;
+    margin: 15px 0;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    .button_text {
+        z-index: 3;
+        transition: all 0.5s ease-out;
+        text-align: left;
+    }
+    svg {
+        z-index: 3;
+        transition: all 0.5s ease-out;
+    }
+}
+.button_1 {
+    @extend .btn;
+    flex-direction: row;
+    padding: 15px 20px;
+    color: $white;
+    background: $dark;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: $white;
+        z-index: 0;
+        transition: width 0.5s cubic-bezier(0.585, 0.005, 0, 0.995) 0.1s;
+    }
+}
+
+.button_1:hover {
+    svg {
+        color: $dark;
+    }
+    .button_text {
+        color: $dark;
+    }
+    &::before {
+        width: 100%;
+    }
+}
+
+.button_2 {
+    @extend .btn;
+    align-items: center;
+    border-bottom: 1.5px solid $red;
+    color: $red;
+    transition: padding 0.5s cubic-bezier(0.585, 0.005, 0, 0.995) 0.1s;
+}
+
+.button_2:hover {
+    padding: 0 1rem;
+}
+
+.button_3 {
+    @extend .btn;
+    border-bottom: 1.5px solid $white;
+    color: $white;
+    transition: padding 0.5s cubic-bezier(0.585, 0.005, 0, 0.995) 0.1s;
+}
+
+.button_3:hover {
+    padding: 0 1rem;
+}
+
+.button_4 {
+    @extend .btn;
+    border-bottom: 1.5px solid $dark;
+    color: $dark;
+    width: 100%;
+}
+
+.button_5 {
+    @extend .btn;
+    align-items: center;
+    border-bottom: 1.5px solid $red;
+    color: $red;
+    width: 100%;
+    flex-direction: row;
+}
+
+.button_6 {
+    @extend .btn;
+    transition: padding 0.5s cubic-bezier(0.585, 0.005, 0, 0.995) 0.1s;
+}
+.button_6:hover {
+    padding: 0 0.5rem !important;
+}
+
+.button_7 {
+    @extend .btn;
+    width: 270px;
+    background-color: white;
+    color: black;
+    padding: 15px 20px;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: black;
+        z-index: 0;
+        transition: width 0.5s cubic-bezier(0.585, 0.005, 0, 0.995) 0.1s;
+    }
+}
+
+.button_7:hover {
+    svg {
+        color: white;
+    }
+    .button_text {
+        color: white;
+    }
+    &::before {
+        width: 100%;
+    }
+}
+
+.position_center {
+    margin: 15px auto;
+}
+
+.position_right {
+    margin: 15px 0 0 auto;
+}
